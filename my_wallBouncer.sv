@@ -21,25 +21,44 @@ module my_wallBouncer (
 						 );
 
 assign C_pic = C_map[3071:0];
-logic [9:0] A_left;
-logic [9:0] A_right;
-logic [9:0] B_right;
-logic [9:0] B_left;
-logic [9:0] Y_resize;
-logic [9:0] X_resize;
-logic [12:0] WX_resize;
-logic [12:0] HY_resize;
+//logic [9:0] A_left;
+//logic [9:0] A_right;
+//logic [9:0] B_right;
+//logic [9:0] B_left;
+//logic [9:0] Y_resize;
+//logic [9:0] X_resize;
+//logic [12:0] WX_resize;
+//logic [12:0] HY_resize;
+
+logic [11:0] A_left;
+logic [11:0] A_right;
+logic [11:0] B_right;
+logic [11:0] B_left;
+logic [11:0] Y_resize;
+logic [11:0] X_resize;
+logic [13:0] WX_resize;
+logic [13:0] HY_resize;
+
 
 always_comb begin
 
-Y_resize = (sprite_ypos >> 5'd5); 
-X_resize = (sprite_xpos >> 5'd5); 
-WX_resize = ((sprite_W + sprite_xpos) >> 5'd5);
-HY_resize = ((sprite_H + sprite_ypos) >> 5'd5);
-A_left  = (Y_resize * 5'd20) + X_resize;
-A_right = (Y_resize * 5'd20) + WX_resize;
-B_left  = ((HY_resize) * 5'd20) + X_resize;
-B_right = ((HY_resize) * 5'd20) + WX_resize;
+Y_resize = (sprite_ypos /10); 
+X_resize = (sprite_xpos /10); 
+WX_resize = ((sprite_W + sprite_xpos) /10);
+HY_resize = ((sprite_H + sprite_ypos) /10);
+A_left  = (Y_resize * 7'd64) + X_resize;
+A_right = (Y_resize * 7'd64) + WX_resize;
+B_left  = ((HY_resize) * 7'd64) + X_resize;
+B_right = ((HY_resize) * 7'd64) + WX_resize;
+
+//Y_resize = (sprite_ypos >> 5'd5); 
+//X_resize = (sprite_xpos >> 5'd5); 
+//WX_resize = ((sprite_W + sprite_xpos) >> 5'd5);
+//HY_resize = ((sprite_H + sprite_ypos) >> 5'd5);
+//A_left  = (Y_resize * 5'd20) + X_resize;
+//A_right = (Y_resize * 5'd20) + WX_resize;
+//B_left  = ((HY_resize) * 5'd20) + X_resize;
+//B_right = ((HY_resize) * 5'd20) + WX_resize;
 
 	bnceL  = 1'b0;
 	bnceD  = 1'b0;
