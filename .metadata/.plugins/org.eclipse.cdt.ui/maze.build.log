@@ -1,0 +1,6 @@
+20:15:11 **** Clean-only build of configuration Nios II for project maze ****
+make clean 
+[maze clean complete]
+
+20:15:12 Build Finished (took 264ms)
+

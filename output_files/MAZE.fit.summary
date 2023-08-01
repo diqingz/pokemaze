@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed May 10 21:32:57 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : MAZE
+Top-level Entity Name : top
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 14,146 / 49,760 ( 28 % )
+    Total combinational functions : 13,543 / 49,760 ( 27 % )
+    Dedicated logic registers : 2,644 / 49,760 ( 5 % )
+Total registers : 2713
+Total pins : 102 / 360 ( 28 % )
+Total virtual pins : 0
+Total memory bits : 671,952 / 1,677,312 ( 40 % )
+Embedded Multiplier 9-bit elements : 2 / 288 ( < 1 % )
+Total PLLs : 2 / 4 ( 50 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )
